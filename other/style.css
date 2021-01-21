@@ -1,0 +1,35 @@
+/* 小风车 */
+
+#article-container h1:before, #article-container h2:before, #article-container h3:before, #article-container h4:before, #article-container h5:before, #article-container h6:before{
+    -webkit-animation: avatar_turn_around 1s linear infinite;
+    -moz-animation: avatar_turn_around 1s linear infinite;
+    -o-animation: avatar_turn_around 1s linear infinite;
+    -ms-animation: avatar_turn_around 1s linear infinite;
+    animation: avatar_turn_around 1s linear infinite
+    position: absolute;
+    top: calc(50% - 0.35rem);
+    color: #00c4b6;
+    content: '\f863';
+    line-height: 1;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#page+#aside-content .sticky_layout .card-widget:not(:last-child), #page+#aside-content .card-announcement {
+  display: none;
+}
+#archive+#aside-content .sticky_layout .card-categories,#archive+#aside-content .sticky_layout .card-tags,#archive+#aside-content .sticky_layout .card-archives{
+  display: none;
+}
+
+/*移动端优化：去除归档、标签、最新文章、公告、、只保留网站统计*/
+
+@media screen and (max-width: 800px) {
+    #aside-content div:not(:last-child) {
+        display: none;
+        font-size: 13px;
+    }
+}
