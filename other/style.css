@@ -28,10 +28,6 @@
   display: none;
 }
 
-/* 代码块儿不显示代码语言 */
-#article-container .highlight-tools .code-lang{
-  display: none!important;
-}
 
 /*移动端优化：去除归档、标签、最新文章、公告、、只保留网站统计*/
 
