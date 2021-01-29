@@ -37,3 +37,7 @@
         font-size: 13px;
     }
 }
+
+#page-header #post-info{
+  z-index: 1
+}
