@@ -45,3 +45,79 @@ function qipao() {
 
 // 调用气泡方法
 qipao();
+
+$(document).ready(() => {
+    changeStyle()
+});
+
+changeStyle = () => {
+    let tags = $('.card-tag-cloud').children()
+    tags.each((index,element ) => {
+        let item = $(element)
+        item.css({
+            "color":getColor(index),
+            "background-color":getBgColor(index),
+            "border-radius":'12px',
+            "font-size":"12px",
+            "margin":"5px 3px",
+            "padding": "0 8px"
+        })
+        item.text()
+
+    });
+
+    let tags1 = $('.tag-cloud-list').children()
+    tags1.each((index,element ) => {
+        let item = $(element)
+        item.css({
+            "color":getColor(index),
+            "background-color":getBgColor(index),
+            "border-radius":'20px',
+            "margin":"5px",
+            "padding": "0 8px"
+        })
+        item.text()
+
+    });
+
+}
+
+getColor = (index) => {
+    switch (index % 7) {
+        case 0:
+            return '#ff4e6a'
+        case 1:
+            return '#ffaa73'
+        case 2:
+            return '#fed466'
+        case 3:
+            return '#3cdc82'
+        case 4:
+            return '#64dcf0'
+        case 5:
+            return '#64b9ff'
+        case 6:
+            return '#b4b4ff'
+    }
+}
+
+getBgColor = (index) => {
+    switch (index % 7) {
+        case 0:
+            return 'rgba(255,78,106,0.15)';
+        case 1:
+            return 'rgba(255,170,115,0.15)';
+        case 2:
+            return 'rgba(254,212,102,0.15)';
+        case 3:
+            return 'rgba(60,220,130,0.15)';
+        case 4:
+            return 'rgba(100,220,240,0.15)';
+        case 5:
+            return 'rgba(100,185,255,0.15)';
+        case 6:
+            return 'rgba(180,180,255,0.15)';
+    }
+}
+
+
