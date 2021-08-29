@@ -57,8 +57,7 @@ changeStyle = () => {
         item.css({
             "color":getColor(index),
             "background-color":getBgColor(index),
-            "border-radius":'12px',
-            "font-size":"12px",
+            "border-radius":'8px',
             "margin":"5px 3px",
             "padding": "0 8px"
         })
@@ -72,11 +71,11 @@ changeStyle = () => {
         item.css({
             "color":getColor(index),
             "background-color":getBgColor(index),
-            "border-radius":'20px',
+            "border-radius":'10px',
             "margin":"5px",
             "padding": "0 8px"
         })
-        item.text()
+         item.text("# "+item.text())
 
     });
 
@@ -119,5 +118,3 @@ getBgColor = (index) => {
             return 'rgba(180,180,255,0.15)';
     }
 }
-
-
